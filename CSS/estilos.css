@@ -13,11 +13,22 @@ body {
 
 header {
     position: fixed;
+    min-width: 1210px;
     top: 0;
     left: 0;
     width: 100%;
+    height: 90px;
     padding: 25px 80px;
     background-color: #76C7C1;
+}
+
+header .container{
+    max-width: 1080px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
 }
 
 header .logo{
@@ -32,11 +43,19 @@ header .menu {
     margin-top: 5px;
 }
 
-header ul li{
-    display: inline-block;
+header .menu ul{
+    padding: 0 0;
 }
 
-header ul li:hover {background: #E95048; height: 30px; border-radius: 5px;}
+header ul li{
+    display: inline-block;
+    height: 30px;
+}
+
+header ul li:hover {
+    background: #E95048;  
+    border-radius: 5px;
+}
 
 header ul li:hover ul {
     display: block;
@@ -44,12 +63,11 @@ header ul li:hover ul {
 
 header ul li ul {
     position: absolute;
-    width: 200px;
+    width: 10px;
     display: none;
 }
 
 header ul li ul li {
-    background: #E95048;
     display: block;
 }
 
@@ -58,23 +76,25 @@ header ul li ul div {
     display: block;
     border-radius: 10px;
     width: 200px;
-    padding: 10px 15px;
-    margin-top: 1px;
+    padding: 10px 10px;
+    margin-top: 10px;
     border-top-left-radius:0;
 }
 
 header ul li ul li a {
     display: block !important;
+    padding: 5px 0;
 }
 
-header ul li ul li:hover {background: #60C2C1;
-    padding: 0 0;
-    margin: 0 0;
+header ul li ul li:hover {
+    background: #60C2C1;
+    margin: 0;
+    padding: 0;
 }
 
 header ul li a{
     text-decoration: none;
-    font-size: 18px;
+    font-size: 14px;
     color:#ffffff;
     width: 100%;
     height: 100%;
@@ -84,8 +104,6 @@ header ul li a{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-
-
 .wrap {
     background: rgba(0,0,0,0.1) url(../assets/cidade-e-municipio-og.jpg) no-repeat;
     background-position: center;
@@ -93,6 +111,14 @@ header ul li a{
     min-height: 100%;
     overflow: hidden;
     background-blend-mode: overlay;
+}
+
+.content {
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .landing--img {
@@ -141,7 +167,9 @@ header ul li a{
     display: flex;
     flex-direction: row;
     height: 127px;
-    width: 1492px;
+    width: 100%;
+    padding: 20px;
+    max-width: 1080px;
     background-color: #E9E9E9;
     justify-content: center;
     align-items: center;
@@ -149,7 +177,7 @@ header ul li a{
 }
 
 .servicebox--title {
-    font-size: 40px;
+    font-size: 36px;
     font-weight: 600;
     color: #707070;
 }
@@ -159,22 +187,21 @@ header ul li a{
     color: #707070;
 }
 
-.servicebox--btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 10vh;
-    width: 257px;
-    height: 71px;
-    background-color: #E95048;
-    border-radius: 8px;
-    box-shadow: 0px 3px 0px 0px #81010184;
-}
 
-.servicebox--btn--text {
+
+.servicebox .button {
+    text-align: center;
+    white-space: nowrap;
     color: white;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 700;
+    text-decoration: none;
+    background-color: #E95048;
+    border-radius: 5px;
+    padding:10px 25px;
+    box-shadow: 0px 3px 0px 0px #81010184;
+    margin-left: 20px;
+
 }
 
 .cardinfo {
@@ -207,8 +234,8 @@ header ul li a{
     display: inline-block;
     text-align: center;
     margin-top: 5%;
-    padding: 5% 10%;
-    border-radius: 8px;
+    padding: 5% 20%;
+    border-radius: 5px;
     color: white;
     font-size: 20px;
     font-weight: 600;
@@ -227,10 +254,11 @@ footer {
     color:white;
 }
 
-.container--info {
+.content--info {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
+    max-width: 1080px;
 }
 
