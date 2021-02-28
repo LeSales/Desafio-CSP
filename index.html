@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="utf-8">
     <title>Desafio CSP</title>
     <link rel="stylesheet" href="css/estilos.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
 
 </head>
 
@@ -13,9 +14,16 @@
     <header>
         <div class="container">
             <div class="logo">MODUSversus</div>
+            
             <div class="menu-section">
+                
+                <div class="menu-toggle">
+                    <div class="one"></div>
+                    <div class="two"></div>
+                    <div class="three"></div>
+                </div>
                 <nav>
-                    <ul>
+                    <ul class="menu-item">
                         <li><a href="#">HOME</a></li>
                         <li><a href="#">ABOUT</a></li>
                         <li>
@@ -159,5 +167,17 @@
     <span style="font-weight: 600;">Criado por Leandro Sales</span>
     <span>Desafio CSP 2021</span>
 </footer>
+
+<script>
+    let show = true;
+
+    const menuSection = document.querySelector(".menu-section")
+    const menuToggle = menuSection.querySelector(".menu-toggle")
+
+    menuToggle.addEventListener("click", () => {
+        menuSection.classList.toggle("on", show)
+        show = !show;
+    })
+</script>
 
 </html>
